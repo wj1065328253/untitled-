@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        #photo{
+            width: 300px;
+            height: 300px;
+        }
+        #biao li{
+            margin-left: 15px;
+            width: 10px;
+            height: 10px;
+            float: left;
+            background: white;
+            border: 1px black solid;
+            border-radius: 100%;
+        }
+        #box{
+
+            width: 60px;
+            height: 10px;
+            position: relative;
+            top: -36px;
+            right: -206px;
+        }
+    </style>
+</head>
+<body>
+<div>
+   <img id="photo" src="zlb1.jpg">
+    <div id="box">
+        <ul id="biao" type="none" style="padding: 0px">
+            <li id="li1" onmouseover="start(1)" onmouseout="init()" style="background: red"><a href="#"></a></li>
+            <li id="li2" onmouseover="start(2)" onmouseout="init()"><a href="#"></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    window.onload=init;
+    var n=1;
+    function init(){
+        dsq1=window.setInterval("fn()",2000)
+    }
+    function fn(){
+        n++;
+        if(n>2){
+            n=1
+        }
+        for(var i=1;i<=2;i++){
+            var ln=document.getElementById("li"+i);
+            ln.style.background="white"
+        }
+        var l=document.getElementById("li"+n);
+        var photo=document.getElementById("photo")
+        l.style.background="red";
+        photo.src="zlb"+n+".jpg"
+    }
+    photo.onmouseover=function(){
+        window.clearTimeout(dsq1)
+    };
+    photo.onmouseout=function(){
+        dsq1=window.setInterval("fn()",2000)
+    };
+    function start(e){
+        n=e;
+        for(var i=1;i<=2;i++){
+            var ln=document.getElementById("li"+i);
+            ln.style.background="white"
+        }
+        var l=document.getElementById("li"+n);
+        var photo=document.getElementById("photo");
+        l.style.background="red";
+        photo.src="zlb"+n+".jpg";
+        window.clearInterval(dsq1)
+    }
+
+</script>
+</body>
+</html>

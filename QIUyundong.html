@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #dabox{
+            width: 1400px;
+            height: 400px;
+        }
+
+
+        #box{
+            width: 200px ;
+            height: 200px;
+            background:radial-gradient(at 50px 50px ,white,red);
+            border-radius: 100px;
+
+            /*/!*动画对象名称 完成时间*!/循环播放*/
+
+
+            animation:ball 8s;
+            animation-iteration-count: infinite;
+
+
+        }
+       /*#dabox:hover #box{*/
+           /*transform:translate(1200px,0px) rotateZ(14400deg) rotateX(14400deg) rotateY(14400deg);*/
+           /**/
+
+       /*}*/
+
+
+        /*动画插入*/
+
+
+
+        @keyframes ball  {
+            0%{}
+            100%{
+                transform: translate(1200px,0px);
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div id="dabox">
+   <div id="box">
+
+   </div>
+</div>
+</body>
+</html>

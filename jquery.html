@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #nan{
+            width: 200px;
+            height: 200px;
+            background: yellow;
+            font-size: 20px;
+            text-align: center;
+            line-height: 200px;
+        }
+        #nv{
+            width: 200px;
+            height: 200px;
+            background: green;
+            font-size: 20px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box">
+    <div id="nan">帅哥</div>
+    <div id="nv">美女</div>
+</div>
+
+</body>
+<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+<script>
+$("#nan").mouseover(function(){
+    $("#nv").hide();
+})
+$("#nan").mouseout(function(){
+    $("#nv").show();
+})
+
+</script>
+</html>

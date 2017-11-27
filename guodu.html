@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box{
+            width:100px;
+            height:100px;
+            background:red;
+        }
+        #xiao{
+            width: 100px;
+            height: 200px;
+            background: blue;
+            transform: translate(0,300px);
+            transition: all 1s;
+        }
+        #box:hover #xiao{
+            transform:translate(300px,100px) rotate(90deg) scale(0.8);
+
+
+        }
+    </style>
+
+</head>
+<body>
+<div id="box">
+    <img id="xiao" src="rocket.png">
+</div>
+</body>
+</html>

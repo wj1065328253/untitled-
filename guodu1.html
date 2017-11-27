@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            background: red;
+            text-align: center;
+
+
+
+        }
+        #green{
+            width: 100px;
+            height: 100px;
+
+            overflow: hidden;
+
+
+
+        }
+        #blue{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            transform: translate(0,-100px);
+            transition: all 1s;
+        }
+        #box:hover #blue{
+
+            transform:translate(0,0);
+
+        }
+    </style>
+</head>
+<body>
+ <div id="box">
+     点我
+
+     <div id="green">
+         <div id="blue"></div>
+     </div>
+ </div>
+
+</body>
+</html>
